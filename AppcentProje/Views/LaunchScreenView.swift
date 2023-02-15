@@ -13,7 +13,7 @@ struct LaunchScreenView: View {
         @State  var opacity = 0.5
     var body: some View {
         if isActive{
-            mainView()
+            MainView()
         }else{
             ZStack{
                 Color.black

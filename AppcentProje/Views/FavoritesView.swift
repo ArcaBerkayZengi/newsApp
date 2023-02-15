@@ -17,7 +17,7 @@ struct FavoritesView: View {
                    .font(.title)
                    .padding(.bottom)
                    
-                   NavigationLink(destination: mainView(), label: {
+                   NavigationLink(destination: MainView(), label: {
                        Text("Show News")
                            .bold()
                            .frame(width: 280, height: 50)

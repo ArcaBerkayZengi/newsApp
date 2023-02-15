@@ -19,7 +19,7 @@ struct ContentView: View {
     //------Search bar filter function --------
     
     
-    @ObservedObject var newsVM = NewsViewModel()
+    @ObservedObject var newsVM = NewsModel()
     var body: some View {
       
         NavigationView{
@@ -27,7 +27,7 @@ struct ContentView: View {
                 List{
                     ForEach(filteredNews, id:\.self) { response in
                        
-                        NavigationLink(destination: openURL(article: response)) {
+                        NavigationLink(destination: OpenURL(article: response)) {
                             HStack {
                                 
                                 // KingFisher
