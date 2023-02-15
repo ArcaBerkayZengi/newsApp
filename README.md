@@ -16,4 +16,5 @@ If your internet goes out during the application, you will automatically encount
 
 I have also included in-app images below for better explanation.
 
-![Ekran Resmi 2023-02-14 16 32 17](https://user-images.githubusercontent.com/64158570/218763707-677f7d6f-1626-43bd-915b-46932dea47dc.png)
+
+![newP](https://user-images.githubusercontent.com/64158570/219097261-2298fb73-5f1b-44bd-b038-c806c40989d1.png)
