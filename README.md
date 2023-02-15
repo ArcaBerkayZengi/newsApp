@@ -17,4 +17,5 @@ If your internet goes out during the application, you will automatically encount
 I have also included in-app images below for better explanation.
 
 
-![newP](https://user-images.githubusercontent.com/64158570/219097261-2298fb73-5f1b-44bd-b038-c806c40989d1.png)
+![phone](https://user-images.githubusercontent.com/64158570/219097710-4cce5880-f742-4ea3-9b89-dd738c5aeb7c.png)
+
