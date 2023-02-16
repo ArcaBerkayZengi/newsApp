@@ -1,11 +1,20 @@
-
-
 import SwiftUI
 import Kingfisher
+
 struct OpenURL: View {
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(key: "savedDate", ascending: false)],
+        animation: .default)
+     var fetchedItemsfromCoreData: FetchedResults<NewsEntity>
+    @Environment(\.managedObjectContext) var viewContext
     @State var isFavorited : Bool = false
+    @State private var showingAlert = false
+    @StateObject var viewModel: OpenURLViewModel = .init()
     let article : Article
+
     var body: some View {
+        
         VStack{
             ScrollView{
                 KFImage(URL(string: article.urlToImage ?? "noPhoto"))
@@ -62,6 +71,20 @@ struct OpenURL: View {
                 }
                 Button(action: {
                     self.isFavorited.toggle()
+                    // MARK: SAVE TO CORE DATA
+                    self.viewModel.addNewstoCoreData(fetchedItemsfromCoreData: self.fetchedItemsfromCoreData, viewContext: self.viewContext, article: article) { resultBool in
+                        // MARK: CHECK IT IS SUCCESFULLY SAVED OR NOT
+
+                        if resultBool {
+                            // MARK: SAVED TO CORE DATA
+
+                        }
+                        else{
+                            // MARK: NOT SAVED TO CORE DATA
+                            self.showingAlert.toggle()
+                        }
+                    }
+                    
                 }) {
                     Image(systemName: self.isFavorited == true ? "suit.heart.fill" : "heart")
                         .padding(2)
@@ -71,6 +94,9 @@ struct OpenURL: View {
                 }
             })
         }.background(Color.black)
+            .alert("Item is already saved", isPresented: $showingAlert) {
+                Button("OK", role: .cancel) { }
+            }
     }
     
     func shareNews() {

@@ -2,6 +2,7 @@
 import SwiftUI
 
 struct NoNetworkView: View {
+    @StateObject var networkMonitor = NetworkManager()
     var body: some View {
         
         VStack(spacing: 12){
@@ -20,7 +21,7 @@ struct NoNetworkView: View {
                 .foregroundColor(.black)
                 .multilineTextAlignment(.center)
             Button(action: {
-                
+                networkMonitor.objectWillChange.send()
             },label:{
                 Text("Retry")
                     .font(.headline)
@@ -31,6 +32,7 @@ struct NoNetworkView: View {
                     .background(Color.red.cornerRadius(10)
                         .shadow(radius: 10))
                     .padding(.top,20)
+                    
             })
         }
     }

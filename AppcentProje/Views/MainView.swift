@@ -1,29 +1,24 @@
 import SwiftUI
 
 struct MainView: View {
-   
-    @ObservedObject var networkManager = NetworkManager()
+
     var body: some View {
-        
-        if !networkManager.isConnected {
-            NoNetworkView()
-            
-        }else{
+        ZStack{
             TabView {
                 ContentView()
                     .tabItem {
                         Label("News", systemImage: "house")
                     }
-                
+
                 FavoritesView()
                     .tabItem {
                         Label("Favorites", systemImage: "heart")
                     }
-                    
+
             }
             .accentColor(.red)
-           
         }
+
     }
 }
         struct mainView_Previews: PreviewProvider {

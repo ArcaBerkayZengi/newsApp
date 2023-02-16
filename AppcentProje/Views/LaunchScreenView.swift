@@ -1,16 +1,17 @@
 //
-//  LaunchScreenView.swift
+//  LaunchSvreen.swift
 //  AppcentProje
 //
+//  Created by BZ on 10.02.2023.
 //
 
 import SwiftUI
 
 struct LaunchScreenView: View {
-   
-        @State  var isActive = false
-        @State  var size = 0.8
-        @State  var opacity = 0.5
+
+    @State  var isActive = false
+    @State  var size = 0.8
+    @State  var opacity = 0.5
     var body: some View {
         if isActive{
             MainView()
