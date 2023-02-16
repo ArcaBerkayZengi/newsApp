@@ -1,9 +1,4 @@
-//
-//  ContentView.swift
-//  AppcentProje
-//
-//  Created by BZ on 27.01.2023.
-//
+
 
 import SwiftUI
 import Kingfisher
@@ -12,18 +7,7 @@ struct ContentView: View {
     @State private var isLoading = false
     @State private var searchText=""
     @StateObject var networkManager = NetworkManager()
-    
-   
-    //------SearchBar filter function -------
-    var filteredNews: [Article] {
-        if searchText == "" {return newsVM.articles}
-        return newsVM.articles.filter {
-            $0.title.lowercased().contains(searchText.lowercased())
-        }
-    }
-    
-    //------Search bar filter function --------
-    
+
     
     @ObservedObject var newsVM = NewsModel()
     var body: some View {
@@ -34,7 +18,7 @@ struct ContentView: View {
             }else{
 
                       List{
-                          ForEach(filteredNews, id:\.self) { response in
+                          ForEach(newsVM.articles, id:\.self) { response in
 
                               NavigationLink(destination: OpenURL(article: response)) {
                                   HStack {
@@ -64,12 +48,14 @@ struct ContentView: View {
                           .redacted(reason: isLoading ? .placeholder : [])
 
                       }.searchable(text: $searchText)
+                    .onChange(of: searchText, perform: { newValue in
+                        newsVM.getNews(searchString: newValue)
+                    })
                           .navigationTitle(Text("Appcent News"))
             }
                     
             }.onAppear {
-                Service.shared.getNews()
-                
+                newsVM.getNews(searchString: self.searchText)
             }
         
         

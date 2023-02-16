@@ -10,6 +10,9 @@
 		251E2597299E3F720097712C /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251E2596299E3F720097712C /* FavoritesViewModel.swift */; };
 		251E2599299E427F0097712C /* OpenURLViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251E2598299E427F0097712C /* OpenURLViewModel.swift */; };
 		251E259B299E4B8E0097712C /* FavoritesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251E259A299E4B8E0097712C /* FavoritesDetailView.swift */; };
+		251E259E299E64FB0097712C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251E259D299E64FB0097712C /* Constant.swift */; };
+		251E25A0299E65040097712C /* Constant+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251E259F299E65040097712C /* Constant+API.swift */; };
+		251E25A3299E675A0097712C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251E25A2299E675A0097712C /* StringExtension.swift */; };
 		252B0224299E3B470006AA3E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B0223299E3B470006AA3E /* Persistence.swift */; };
 		252B0227299E3BB90006AA3E /* FavoriteNewsCoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 252B0225299E3BB90006AA3E /* FavoriteNewsCoreModel.xcdatamodeld */; };
 		7B0DE1282983B6C8002EE520 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DE1272983B6C8002EE520 /* Service.swift */; };
@@ -36,6 +39,9 @@
 		251E2596299E3F720097712C /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		251E2598299E427F0097712C /* OpenURLViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLViewModel.swift; sourceTree = "<group>"; };
 		251E259A299E4B8E0097712C /* FavoritesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDetailView.swift; sourceTree = "<group>"; };
+		251E259D299E64FB0097712C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		251E259F299E65040097712C /* Constant+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+API.swift"; sourceTree = "<group>"; };
+		251E25A2299E675A0097712C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		252B0223299E3B470006AA3E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		252B0226299E3BB90006AA3E /* FavoriteNewsCoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteNewsCoreModel.xcdatamodel; sourceTree = "<group>"; };
 		7B0DE1272983B6C8002EE520 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -71,10 +77,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		251E259C299E64F00097712C /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				251E259D299E64FB0097712C /* Constant.swift */,
+				251E259F299E65040097712C /* Constant+API.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		251E25A1299E67510097712C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				251E25A2299E675A0097712C /* StringExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		252B0221299E3B230006AA3E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				251E259C299E64F00097712C /* Constant */,
 				252B0222299E3B2C0006AA3E /* Core Data */,
+				251E25A1299E67510097712C /* Extension */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -271,8 +296,11 @@
 				7B3590A3298CD6B700AFC5F1 /* NoNetworkView.swift in Sources */,
 				7BCCB594298A1536000B8783 /* FavoritesView.swift in Sources */,
 				252B0224299E3B470006AA3E /* Persistence.swift in Sources */,
+				251E259E299E64FB0097712C /* Constant.swift in Sources */,
+				251E25A3299E675A0097712C /* StringExtension.swift in Sources */,
 				7BCCB598298A1E65000B8783 /* OpenURL.swift in Sources */,
 				7BA65E79298375050085AC6D /* NewsViewModel.swift in Sources */,
+				251E25A0299E65040097712C /* Constant+API.swift in Sources */,
 				7BA65E7B298375110085AC6D /* NewsModel.swift in Sources */,
 				7B3590AA298D15E900AFC5F1 /* WebView.swift in Sources */,
 				7B3590B6299986E600AFC5F1 /* LaunchScreenView.swift in Sources */,

@@ -103,3 +103,4 @@ struct FavoritesView_Previews: PreviewProvider {
         FavoritesView()
     }
 }
+

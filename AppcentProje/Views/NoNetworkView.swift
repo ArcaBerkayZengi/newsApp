@@ -32,7 +32,6 @@ struct NoNetworkView: View {
                     .background(Color.red.cornerRadius(10)
                         .shadow(radius: 10))
                     .padding(.top,20)
-                    
             })
         }
     }

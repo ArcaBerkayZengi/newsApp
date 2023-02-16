@@ -1,5 +1,8 @@
-
-
+//
+//  openWebSource.swift
+//  AppcentProje
+//
+//
 import SwiftUI
 import WebKit
 

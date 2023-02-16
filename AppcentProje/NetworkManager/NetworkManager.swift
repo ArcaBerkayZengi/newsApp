@@ -2,7 +2,6 @@
 //  NetworkManager.swift
 //  AppcentProje
 //
-//  Created by BZ on 27.01.2023.
 //
 
 import Foundation
