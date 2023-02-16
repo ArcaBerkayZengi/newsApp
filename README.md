@@ -12,10 +12,13 @@ In this detail section, there are buttons to add to favorites, share the news an
 
 I used WebView to view the news feed. I used UIActivityViewController to share the news.
 
+I used Core Data to keep the news in Favorites.
+
 If your internet goes out during the application, you will automatically encounter an error. I used NetworkManager to do this.
 
 I have also included in-app images below for better explanation.
 
 
-![phone](https://user-images.githubusercontent.com/64158570/219097710-4cce5880-f742-4ea3-9b89-dd738c5aeb7c.png)
+
+![1NEW](https://user-images.githubusercontent.com/64158570/219368429-3a79aee5-cbe6-48b6-8ea5-dff5063a6090.png)
 
